@@ -19,7 +19,8 @@ const path_1 = __importDefault(require("path"));
 (() => __awaiter(void 0, void 0, void 0, function* () {
     const response = yield (0, prompts_1.default)({
         type: 'text',
-        name: 'project-name'
+        name: 'project-name',
+        message: "What's your project name?"
     });
     const sourceDir = path_1.default.resolve(__dirname, 'template');
     const destDir = path_1.default.resolve(process.cwd(), response['project-name']);
