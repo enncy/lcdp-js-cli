@@ -1,6 +1,6 @@
 {
 	"name": "@lcdp-js/create-cli",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "cli of ldcp-jd",
 	"main": "index.js",
 	"scripts": {
