@@ -7,7 +7,8 @@ import path from 'path';
 (async () => {
 	const response = await prompts({
 		type: 'text',
-		name: 'project-name'
+		name: 'project-name',
+		message: "What's your project name?"
 	});
 
 	const sourceDir = path.resolve(__dirname, 'template');
