@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"private": true,
 	"description": "",
-	"scripts": {},
+	"scripts": {
+		"dev:server": "cd ./packages/server && npm run dev",
+		"dev:web": "cd ./packages/web && npm run dev"
+	},
 	"devDependencies": {}
 }

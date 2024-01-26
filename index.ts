@@ -16,11 +16,18 @@ import path from 'path';
 
 	copy(sourceDir, destDir);
 
-	console.log(response['project-name'] + ' created!');
-	console.log('run command below to init project: ');
-	console.log('cd ' + response['project-name']);
-	console.log('npm install pnpm');
-	console.log('pnpm install');
+	const l = console.log;
+
+	l(response['project-name'] + ' created!');
+	l('');
+	l('run command below to init project: ');
+	l('		cd ' + response['project-name']);
+	l('		npm install pnpm');
+	l('		pnpm install');
+	l('');
+	l('and open tow terminal to run command below: ');
+	l('		npm run dev:server');
+	l('		npm run dev:web');
 })();
 
 function copy(src: string, dest: string) {

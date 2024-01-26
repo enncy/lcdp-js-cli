@@ -4,6 +4,7 @@ import { controllers } from './api/index';
 import express from 'express';
 import { schemas } from 'schema';
 import mongoose from 'mongoose';
+import path from 'path';
 
 (async () => {
 	const app = express();
@@ -15,6 +16,8 @@ import mongoose from 'mongoose';
 	app
 		// 处理跨域
 		.use(cors())
+		// 静态资源
+		.use(express.static(path.join(__dirname, '../public')))
 		// 解析 post 数据
 		.use(express.urlencoded({ extended: false }))
 		.use(express.json())

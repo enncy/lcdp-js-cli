@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "tsc",
 		"dev": "npx nodemon -w ../schema/src/**/*.ts,./src/**/*.ts  --exec npm run start",
-		"start": "npm run build && node ./lib/app.js"
+		"start": "npm run build && node ./lib/src/app.js"
 	},
 	"author": "",
 	"license": "ISC",
