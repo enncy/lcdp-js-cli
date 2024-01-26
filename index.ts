@@ -16,18 +16,25 @@ import path from 'path';
 
 	copy(sourceDir, destDir);
 
+	const packageJson = JSON.parse(fs.readFileSync(path.resolve(destDir, 'package.json'), 'utf-8'));
+	packageJson.name = response['project-name'];
+	fs.writeFileSync(path.resolve(destDir, 'package.json'), JSON.stringify(packageJson, null, 2));
+
 	const l = console.log;
 
+	l('');
 	l(response['project-name'] + ' created!');
 	l('');
 	l('run command below to init project: ');
-	l('		cd ' + response['project-name']);
-	l('		npm install pnpm');
-	l('		pnpm install');
+	l('');
+	l('	cd ' + response['project-name']);
+	l('	npm install pnpm');
+	l('	pnpm install');
 	l('');
 	l('and open tow terminal to run command below: ');
-	l('		npm run dev:server');
-	l('		npm run dev:web');
+	l('');
+	l('	npm run dev:server');
+	l('	npm run dev:web');
 })();
 
 function copy(src: string, dest: string) {
