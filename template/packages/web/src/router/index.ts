@@ -8,6 +8,10 @@ export const schema_routes = createSchemaRoutes(schema_data.routes, SchemaTableP
 
 export const routes: RouteRecordRaw[] = [
   {
+    path: '/',
+    redirect: '/admin',
+  },
+  {
     path: '/admin',
     name: 'admin',
     redirect: schema_routes[0]?.path || '/',
