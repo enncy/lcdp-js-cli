@@ -1,0 +1,13 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"outDir": "./lib",
+		"declaration": false,
+		"target": "ES2015",
+		"module": "commonjs",
+		"types": ["node"],
+		"downlevelIteration": true
+	},
+	"include": ["./src/**/*.ts"],
+	"exclude": ["./vite.config.ts"]
+}

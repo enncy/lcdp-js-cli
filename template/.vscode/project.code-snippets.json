@@ -1,0 +1,12 @@
+{
+  "create vue template": {
+    "scope": "vue",
+    "prefix": "vue",
+    "body": [
+      "<template></template>",
+      "<script setup lang=\"ts\"></script>",
+      "<style scoped lang=\"less\"></style>"
+    ],
+    "description": "create vue template"
+  }
+}

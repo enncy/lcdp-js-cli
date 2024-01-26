@@ -1,0 +1,30 @@
+{
+	"name": "ldcp-js-cli",
+	"version": "0.0.1",
+	"description": "cli of ldcp-jd",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc"
+	},
+	"files": [
+		"index.js",
+		"template"
+	],
+	"keywords": [
+		"cli",
+		"ldcp-js",
+		"ldcp",
+		"low-code"
+	],
+	"bin": {
+		"init": "./index.js"
+	},
+	"author": "enncy",
+	"license": "MIT",
+	"devDependencies": {
+		"../": "^2.4.2",
+		"typescript": "^5.3.3",
+		"@types/prompts": "^2.4.9",
+		"prompts": "^2.4.2"
+	}
+}

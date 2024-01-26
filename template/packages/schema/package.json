@@ -1,0 +1,13 @@
+{
+	"name": "schema",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.js",
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@lcdp-js/core": "^1.0.0",
+		"reflect-metadata": "^0.1.13"
+	}
+}

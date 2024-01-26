@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // {
+    //   "label": "watch-schema",
+    //   "args": ["-p", "packages/schema/tsconfig.json", "--watch"],
+    //   "type": "shell",
+    //   "command": "tsc",
+    //   "isBackground": true,
+    //   "problemMatcher": "$tsc-watch",
+    //   "presentation": {
+    //     "panel": "new",
+    //     "focus": false,
+    //     "revealProblems": "never"
+    //   }
+    // },
+    // /** 运行服务器 */
+    // {
+    //   "label": "launch-server",
+    //   "type": "shell",
+    //   "command": "cd ./packages/server && pnpm run dev",
+    //   "isBackground": true,
+    //   "problemMatcher": "$tsc-watch",
+    //   "presentation": {
+    //     "panel": "new",
+    //     "focus": false,
+    //     "revealProblems": "never"
+    //   },
+    //   "runOptions": {
+    //     "runOn": "folderOpen"
+    //   }
+    // },
+    // /** 运行前端服务 */
+    // {
+    //   "label": "launch-web",
+    //   "type": "shell",
+    //   "command": "cd ./packages/web && pnpm run dev",
+    //   "isBackground": true,
+    //   "problemMatcher": "$tsc-watch",
+    //   "presentation": {
+    //     "panel": "new",
+    //     "focus": false,
+    //     "revealProblems": "never"
+    //   },
+    //   "runOptions": {
+    //     "runOn": "folderOpen"
+    //   }
+    // }
+  ]
+}

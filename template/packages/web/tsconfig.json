@@ -1,0 +1,20 @@
+{
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "outDir": "./lib",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "lib": ["ES2016", "DOM", "DOM.Iterable"],
+    "target": "esnext",
+    "module": "esnext",
+    "experimentalDecorators": true,
+    "preserveValueImports": false,
+    "verbatimModuleSyntax": false,
+    "isolatedModules": false,
+    "ignoreDeprecations": "5.0",
+    "skipLibCheck": true
+  }
+}

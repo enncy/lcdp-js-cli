@@ -1,0 +1,7 @@
+
+# custom
+
+*.pid
+
+# Ignore core files 
+core.*
