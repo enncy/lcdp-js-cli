@@ -1,5 +1,5 @@
 {
-	"name": "ldcp-js-cli",
+	"name": "@lcdp-js/create-cli",
 	"version": "0.0.1",
 	"description": "cli of ldcp-jd",
 	"main": "index.js",
@@ -21,10 +21,14 @@
 	},
 	"author": "enncy",
 	"license": "MIT",
-	"devDependencies": {
-		"../": "^2.4.2",
-		"typescript": "^5.3.3",
-		"@types/prompts": "^2.4.9",
+	"dependencies": {
 		"prompts": "^2.4.2"
+	},
+	"devDependencies": {
+		"typescript": "^5.3.3",
+		"@types/prompts": "^2.4.9"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
