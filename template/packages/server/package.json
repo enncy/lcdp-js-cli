@@ -4,8 +4,9 @@
 	"description": "",
 	"scripts": {
 		"build": "tsc",
+		"build:schema": "cd ../schema && tsc",
 		"dev": "npx nodemon -w ../schema/src/**/*.ts,./src/**/*.ts  --exec npm run start",
-		"start": "npm run build && node ./lib/src/app.js"
+		"start": "npm run build:schema && npm run build && node ./lib/src/app.js"
 	},
 	"author": "",
 	"license": "ISC",

@@ -28,7 +28,7 @@ import path from 'path';
 	l('run command below to init project: ');
 	l('');
 	l('	cd ' + response['project-name']);
-	l('	npm install pnpm');
+	l('	npm install pnpm -g');
 	l('	pnpm install');
 	l('');
 	l('and open tow terminal to run command below: ');
