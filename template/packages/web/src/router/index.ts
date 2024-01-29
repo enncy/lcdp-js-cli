@@ -4,8 +4,25 @@ import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 import SchemaTablePage from '../components/SchemaTablePage.vue'
 import { schema_data } from '@/apis'
 
-export const schema_routes = createSchemaRoutes(schema_data.routes, {
-  base_component: SchemaTablePage
+export const schema_routes = createSchemaRoutes(schema_data?.schema_metadata_list || [], {
+  /** 默认显示组件，可以使用 override 覆盖 */
+  base_component: SchemaTablePage,
+  override: [
+    // ["User", ()=> import('xxx.vue')]
+  ],
+  /**
+   * 后台路由菜单结构
+   */
+  menus_structure: [
+    /** 用户列表 */
+    'User',
+    {
+      group_icon: 'icon-user',
+      group_name: '分组测试',
+      /** 用户列表 */
+      children: ['User']
+    }
+  ]
 })
 
 export const routes: RouteRecordRaw[] = [

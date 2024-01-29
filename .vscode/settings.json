@@ -12,5 +12,8 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"task.allowAutomaticTasks": "on",
-	"editor.wordBasedSuggestions": "off"
+	"editor.wordBasedSuggestions": "off",
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }

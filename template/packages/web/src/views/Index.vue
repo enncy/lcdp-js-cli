@@ -8,7 +8,7 @@
       <!-- 如果不想使用侧边栏可以直接覆盖此插槽 -->
 
       <a-layout-sider theme="light" breakpoint="lg" :width="220">
-        <Menu class="sider-meuns mt-3" :routes="currentChildren || []"></Menu>
+        <Menu class="sider-meuns mt-3" :routes="currentChildren"></Menu>
       </a-layout-sider>
       <a-layout-content class="layout-base-content">
         <RouterView />
@@ -21,7 +21,7 @@
 import { RouterView, useRouter } from 'vue-router'
 import { computed } from 'vue'
 import { routes } from '../router'
-import { Menu, RouteRecordAndTableRaw } from '@lcdp-js/web'
+import { Menu } from '@lcdp-js/web'
 
 const router = useRouter()
 
@@ -31,9 +31,7 @@ const currentTopSchemaRoute = computed(() =>
 )
 
 // 当前实体路由下的子路由
-const currentChildren = computed(
-  () => (currentTopSchemaRoute.value?.children || []) as RouteRecordAndTableRaw[]
-)
+const currentChildren = computed(() => currentTopSchemaRoute.value?.children || [])
 </script>
 
 <style scoped lang="less">

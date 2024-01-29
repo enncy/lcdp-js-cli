@@ -1,6 +1,15 @@
 <template>
   <div v-if="current_schema_route" class="bg-white">
-    <SchemaTable class="schema" :apis="apis" :schema-route="current_schema_route"></SchemaTable>
+    <SchemaTable
+      class="schema"
+      :apis="apis"
+      :schema-route="current_schema_route"
+      :empty-value-render="() => '---'"
+      :enable-search="true"
+      :enable-table-operate="true"
+      :roles="['create', 'details', 'modify', 'remove']"
+    >
+    </SchemaTable>
   </div>
 </template>
 
