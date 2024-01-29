@@ -1,13 +1,14 @@
 import { Table, BaseSchema, Route, TableItem, createModel, createSchema } from '@lcdp-js/core';
-
+import { ApiType } from './interface';
 @Route({
 	group: '用户管理',
 	label: '用户列表',
 	path: '/admin/user/list',
 	icon: 'icon-user'
 })
-@Table<User, any>({
+@Table<User, ApiType>({
 	name: '用户',
+	apiKey: 'user',
 	renderInSearch: (s) => `${s.nickname}-${s.uid}`
 })
 export class User extends BaseSchema {

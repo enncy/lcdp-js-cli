@@ -4,12 +4,14 @@ import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 import SchemaTablePage from '../components/SchemaTablePage.vue'
 import { schema_data } from '@/apis'
 
-export const schema_routes = createSchemaRoutes(schema_data.routes, SchemaTablePage)
+export const schema_routes = createSchemaRoutes(schema_data.routes, {
+  base_component: SchemaTablePage
+})
 
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/admin',
+    redirect: '/admin'
   },
   {
     path: '/admin',

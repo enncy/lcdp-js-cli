@@ -24,7 +24,7 @@ import path from 'path';
 		.get('/schema-data', (req, res) => {
 			res.send({
 				apis: createControllerDataList(controllers),
-				routes: CoreUtils.createSchemaRoutes(schemas as any)
+				routes: CoreUtils.createSchemaRoutes(schemas)
 			});
 		})
 		// 低代码框架
