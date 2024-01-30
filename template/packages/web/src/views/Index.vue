@@ -8,7 +8,7 @@
       <!-- 如果不想使用侧边栏可以直接覆盖此插槽 -->
 
       <a-layout-sider theme="light" breakpoint="lg" :width="220">
-        <Menu class="sider-meuns mt-3" :routes="currentChildren"></Menu>
+        <Menu class="sider-meuns mt-3" :routes="currentChildren" :router="router"></Menu>
       </a-layout-sider>
       <a-layout-content class="layout-base-content">
         <RouterView />
