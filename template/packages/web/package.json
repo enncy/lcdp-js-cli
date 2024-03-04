@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.40.1",
-    "@lcdp-js/web": "^1.0.29",
+    "@lcdp-js/web": "^1.0.31",
     "axios": "0.26.1",
     "less": "^4.2.0",
     "schema": "link:..\\schema",
