@@ -1,26 +1,27 @@
 import { createServerControllerMiddleware, json, createControllerDataList, CoreUtils } from '@lcdp-js/core';
 import { cors } from './middleware/cors';
 import { controllers } from './api/index';
-import express from 'express';
+import express, { RequestHandler } from 'express';
 import { schemas } from 'schema';
-import mongoose from 'mongoose';
+import fileUpload from 'express-fileupload';
 import path from 'path';
+import { mongo } from './middleware/mongo';
 
 (async () => {
 	const app = express();
 	// 连接数据库
-	mongoose.connect('mongodb://127.0.0.1:27017/lcdp-js-test', {}).then(() => {
-		console.log('[mongo] server launched');
-	});
+	await mongo('mongodb://127.0.0.1:27017/lcdp-js-test');
 
 	app
-		// 处理跨域
-		.use(cors())
 		// 静态资源
 		.use(express.static(path.join(__dirname, '../public')))
+		// 处理跨域
+		.use(cors())
 		// 解析 post 数据
-		.use(express.urlencoded({ extended: false }))
-		.use(express.json())
+		.use(express.urlencoded({ extended: false, limit: '1mb' }))
+		.use(express.json({ limit: '1mb' }))
+		// 解析文件上传
+		.use(fileUpload({ defParamCharset: 'utf8' }) as RequestHandler)
 		.get('/schema-data', (req, res) => {
 			res.send({
 				apis: createControllerDataList(controllers),

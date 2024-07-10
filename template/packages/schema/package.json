@@ -2,12 +2,13 @@
 	"name": "schema",
 	"version": "1.0.0",
 	"description": "",
-	"main": "./lib/index.js",
-	"types": "./lib/index.d.js",
+	"main": "./lib/schema/index.js",
+	"types": "./lib/schema/index.d.ts",
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"@lcdp-js/core": "^1.0.22",
+		"mongodb": "^4.12.1",
 		"reflect-metadata": "^0.1.13"
 	}
 }
