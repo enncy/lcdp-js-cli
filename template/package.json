@@ -5,7 +5,8 @@
 	"description": "",
 	"scripts": {
 		"dev:server": "cd ./packages/server && npm run dev",
-		"dev:web": "cd ./packages/web && npm run dev"
+		"dev:web": "cd ./packages/web && npm run dev",
+		"build": "cd ./packages/web && npm run build-only  &&  cd ../server && npm run build"
 	},
 	"devDependencies": {}
 }
