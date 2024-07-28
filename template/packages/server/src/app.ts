@@ -12,6 +12,11 @@ import { mongo } from './middleware/mongo';
 	// 连接数据库
 	await mongo('mongodb://127.0.0.1:27017/lcdp-js-test');
 
+	// 启用 VUE 核心代码
+	app.set('views', path.join(__dirname, '../public/dist')); //设置模版路径在views目录（默认）
+	app.set('view engine', 'html');
+	app.engine('html', require('ejs').renderFile);
+
 	app
 		// 静态资源
 		.use(express.static(path.join(__dirname, '../public')))
@@ -35,7 +40,13 @@ import { mongo } from './middleware/mongo';
 					res.json(json(undefined, '服务器错误：' + err.message || String(err), 500));
 				}
 			})
-		);
+		)
+
+		// 启用 VUE 核心代码
+		.use((req, res, next) => {
+			res.statusCode = 200;
+			res.render('index.html');
+		});
 	// 启动服务器
 	app.listen(3077, () => {
 		console.log('[express] server launched');
